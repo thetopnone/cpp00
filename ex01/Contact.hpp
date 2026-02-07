@@ -33,12 +33,12 @@ class Contact{
 			std::cout << "Contact Default Constructor Called" << std::endl;
 		}
 
-		Contact(Contact &c){
-			std:cout << "Contact Copy Constructor Called" << std::endl;
+		Contact(Contact&){
+			std::cout << "Contact Copy Constructor Called" << std::endl;
 		}
 
-		Contact &operator=(const Contact &c){
-			std:cout << "Contact Copy Assignment Operator Called" << std::endl;
+		Contact &operator=(const Contact&){
+			std::cout << "Contact Copy Assignment Operator Called" << std::endl;
 			return *this;
 		}
 
@@ -46,12 +46,12 @@ class Contact{
 			std::cout << "Contact Destructor Called" << std::endl;
 		}
 
-		void getIndex() const;
-		void getFirstName() const;
-		void getLastName() const;
-		void getNickname() const;
-		void getPhoneNumber() const;
-		void getDarkestSecret() const;
+		int getIndex() const;
+		std::string getFirstName() const;
+		std::string getLastName() const;
+		std::string getNickname() const;
+		std::string getPhoneNumber() const;
+		std::string getDarkestSecret() const;
 
 		void setIndex(int i);
 		void setFirstName(std::string fn);
@@ -59,6 +59,6 @@ class Contact{
 		void setNickname(std::string nn);
 		void setPhoneNumber(std::string pn);
 		void setDarkestSecret(std::string ds);
-}
+};
 
 #endif

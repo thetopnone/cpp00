@@ -10,4 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "PhoneBook.hpp"
 
+int	main(void){
+	PhoneBook phoneBook;
+	while (1)
+	{
+		phoneBook.addContact();
+	}
+	return (1);
+}

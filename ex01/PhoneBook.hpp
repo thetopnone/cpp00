@@ -18,23 +18,24 @@
 class PhoneBook{
 	private:
 		int	contactAmount;
-		Contacts contacts[8];
+		Contact contacts[8];
 	public:
 		PhoneBook(){
 			contactAmount = 0;
 			std::cout << "PhoneBook Default Constructor Called" << std::endl;
 		}
-		PhoneBook(PhoneBook &pb){
+		PhoneBook(PhoneBook&){
 			std::cout << "PhoneBook Copy Constructor Called" << std::endl;
 		}
-		PhoneBook &operator=(const PhoneBook &pb){\
+		PhoneBook &operator=(const PhoneBook&){
 			std::cout << "PhoneBook Copy Assignment Operator Called" << std::endl;
+			return *this;
 		}
 		~PhoneBook(){
 			std::cout <<"PhoneBook Destructor Called" << std::endl;
 		}
 		void addContact();
 		void searchContact();
-}
+};
 
 #endif

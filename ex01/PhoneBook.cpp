@@ -10,4 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "PhoneBook.hpp"
+
+
+static void addFirstName(Contact *contact){
+	std::string input;
+	std::cout << "Enter the First Name: " << std::endl;
+	std::cin >> input;
+	contact->setFirstName(input);
+}
+
+static void addLastName(Contact *contact){
+	std::string input;
+	std::cout << "Enter the Last Name: " << std::endl;
+	std::cin >> input;
+	contact->setLastName(input);
+}
+
+void PhoneBook::addContact(){
+	
+	Contact *contact = &contacts[contactAmount % 7];
+	addFirstName(contact);
+	addLastName(contact);
+	std::cout << contact->getFirstName() << std::endl;
+	std::cout << contact->getLastName() << std::endl;
+}
 

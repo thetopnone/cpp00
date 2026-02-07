@@ -14,27 +14,27 @@
 #include <cstring>
 
 //Getters for the Contact class
-void Contact::getIndex const(){
+int Contact::getIndex() const{
 	return index;
 }
 
-void Contact::getFirstName const(){
+std::string Contact::getFirstName() const{
 	return firstName;
 }
 
-void Contact::getLastName const(){
+std::string Contact::getLastName() const{
 	return lastName;
 }
 
-void Contact::getNickname const(){
+std::string Contact::getNickname() const{
 	return nickname;
 }
 
-void Contact::getPhoneNumber const(){
+std::string Contact::getPhoneNumber() const{
 	return phoneNumber;
 }
 
-void Contact::getDarkestSecret const(){
+std::string Contact::getDarkestSecret() const{
 	return darkestSecret;
 }
 
