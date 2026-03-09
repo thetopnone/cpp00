@@ -15,14 +15,14 @@
 
 static void addFirstName(Contact *contact){
 	std::string input;
-	std::cout << "Enter the First Name: " << std::endl;
+	std::cout << "Enter the First Name: ";
 	std::cin >> input;
 	contact->setFirstName(input);
 }
 
 static void addLastName(Contact *contact){
 	std::string input;
-	std::cout << "Enter the Last Name: " << std::endl;
+	std::cout << "Enter the Last Name: ";
 	std::cin >> input;
 	contact->setLastName(input);
 }
@@ -34,5 +34,9 @@ void PhoneBook::addContact(){
 	addLastName(contact);
 	std::cout << contact->getFirstName() << std::endl;
 	std::cout << contact->getLastName() << std::endl;
+}
+
+void PhoneBook::updateContactAmount(){
+	contactAmount++;
 }
 

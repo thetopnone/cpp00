@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "Contact.hpp"
-#include <cstring>
+#include "Printers.hpp"
 
 //Getters for the Contact class
 int Contact::getIndex() const{
@@ -44,31 +44,24 @@ void Contact::setIndex(int i){
 }
 
 void Contact::setFirstName(std::string fn){
-	firstName.assign(fn, 0, 10);
-	if (fn.length() > 10)
-		firstName.replace(9, 1, ".");
+	firstName = fn;
+	printPhonebookField(firstName);
 }
 
 void Contact::setLastName(std::string ln){
-	lastName.assign(ln, 0, 10);
-	if (ln.length() > 10)
-		lastName.replace(9, 1, ".");
+	lastName = ln;
+	printPhonebookField(lastName);
 }
 
 void Contact::setNickname(std::string nn){
 	nickname.assign(nn, 0, 10);
-	if (nn.length() > 10)
-		nickname.replace(9, 1, ".");
+	printPhonebookField(nickname);
 }
 
 void Contact::setPhoneNumber(std::string pn){
 	phoneNumber.assign(pn, 0, 10);
-	if (pn.length() > 10)
-		phoneNumber.replace(9, 1, ".");
 }
 
 void Contact::setDarkestSecret(std::string ds){
 	darkestSecret.assign(ds, 0, 10);
-	if (ds.length() > 10)
-		darkestSecret.replace(9, 1, ".");
 }

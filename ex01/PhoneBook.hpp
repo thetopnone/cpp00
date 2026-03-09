@@ -14,6 +14,7 @@
 # define PHONEBOOK_HPP
 # include "Contact.hpp"
 # include <iostream>
+# include <iomanip>
 
 class PhoneBook{
 	private:
@@ -32,8 +33,9 @@ class PhoneBook{
 			return *this;
 		}
 		~PhoneBook(){
-			std::cout <<"PhoneBook Destructor Called" << std::endl;
+			std::cout << "PhoneBook Destructor Called" << std::endl;
 		}
+		void updateContactAmount();
 		void addContact();
 		void searchContact();
 };
