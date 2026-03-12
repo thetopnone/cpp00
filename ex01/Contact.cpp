@@ -45,17 +45,14 @@ void Contact::setIndex(int i){
 
 void Contact::setFirstName(std::string fn){
 	firstName = fn;
-	printPhonebookField(firstName);
 }
 
 void Contact::setLastName(std::string ln){
 	lastName = ln;
-	printPhonebookField(lastName);
 }
 
 void Contact::setNickname(std::string nn){
 	nickname.assign(nn, 0, 10);
-	printPhonebookField(nickname);
 }
 
 void Contact::setPhoneNumber(std::string pn){

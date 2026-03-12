@@ -30,20 +30,16 @@ class Contact{
 			nickname = "";
 			phoneNumber = "";
 			darkestSecret = "";
-			std::cout << "Contact Default Constructor Called" << std::endl;
 		}
 
 		Contact(Contact&){
-			std::cout << "Contact Copy Constructor Called" << std::endl;
 		}
 
 		Contact &operator=(const Contact&){
-			std::cout << "Contact Copy Assignment Operator Called" << std::endl;
 			return *this;
 		}
 
 		~Contact(){
-			std::cout << "Contact Destructor Called" << std::endl;
 		}
 
 		int getIndex() const;

@@ -10,9 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef PRINTERS_HPP
+# define PRINTERS_HPP
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
 #include <iostream>
 #include <iomanip>
 #include <string>
 #include <cstring>
 
-void	printPhonebookField(std::string field);
+void	printPhoneBookField(std::string field);
+void	printPhoneBookEntry(const Contact &contact);
+void	printContact(const Contact &contact);
+#endif
