@@ -13,6 +13,42 @@
 #include "Contact.hpp"
 #include "Printers.hpp"
 
+//CONSTRUCTOR AND DECONSTRUCTOR FOR THE CONTACT CLASS
+Contact::Contact()
+	:index(-1)
+	,firstName("")
+	,lastName("")
+	,nickname("")
+	,phoneNumber("")
+	,darkestSecret("")
+{}
+
+Contact::Contact(const Contact &other)
+{
+	index = other.index;
+	firstName = other.firstName;
+	lastName = other.lastName;
+	nickname = other.nickname;
+	phoneNumber = other.phoneNumber;
+	darkestSecret = other.darkestSecret;
+}
+
+Contact &Contact::operator=(const Contact &other)
+{
+	if (this != &other)
+	{
+		index = other.index;
+		firstName = other.firstName;
+		lastName = other.lastName;
+		nickname = other.nickname;
+		phoneNumber = other.phoneNumber;
+		darkestSecret = other.darkestSecret;
+	}
+	return (*this);
+}
+
+Contact::~Contact(){}
+
 //Getters for the Contact class
 int Contact::getIndex() const{
 	return index;

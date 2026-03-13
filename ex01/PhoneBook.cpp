@@ -15,6 +15,30 @@
 #include <cstring>
 #include <cstdlib>
 
+PhoneBook::PhoneBook()
+	:contactAmount(0)
+{}
+
+PhoneBook::PhoneBook(const PhoneBook &other)
+{
+	contactAmount = other.contactAmount;
+	for (int i = 0; i < 8; i++)
+		contacts[i] = other.contacts[i];
+}
+
+PhoneBook &PhoneBook::operator=(const PhoneBook &other)
+{
+	if (this != &other)
+	{
+		contactAmount = other.contactAmount;
+		for (int i = 0; i < 8; i++)
+			contacts[i] = other.contacts[i];
+	}
+	return (*this);
+}
+
+PhoneBook::~PhoneBook(){}
+
 static void addFirstName(Contact &contact){
 	std::string input;
 	std::cout << "Enter First Name: ";
@@ -104,7 +128,7 @@ void PhoneBook::searchContact(){
 
 	std::cout << std::endl;
 	if (contactAmount == 0){
-		std::cout << "Phone Book is still empty.Please enter a contact using ADD\n" << std::endl;
+		std::cout << "Phone Book is still empty\nPlease first enter a contact using ADD\n" << std::endl;
 		return ;
 	}
 	printPhoneBook();

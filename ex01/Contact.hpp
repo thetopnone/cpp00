@@ -23,24 +23,10 @@ class Contact{
 		std::string phoneNumber;
 		std::string darkestSecret;
 	public:
-		Contact(){
-			index = -1;
-			firstName = "";
-			lastName = "";
-			nickname = "";
-			phoneNumber = "";
-			darkestSecret = "";
-		}
-
-		Contact(Contact&){
-		}
-
-		Contact &operator=(const Contact&){
-			return *this;
-		}
-
-		~Contact(){
-		}
+		Contact();
+		Contact(const Contact &other);
+		Contact &operator=(const Contact &other);
+		~Contact();
 
 		int getIndex() const;
 		std::string getFirstName() const;

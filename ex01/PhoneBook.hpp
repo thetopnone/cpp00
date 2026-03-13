@@ -21,16 +21,10 @@ class PhoneBook{
 		int	contactAmount;
 		Contact contacts[8];
 	public:
-		PhoneBook(){
-			contactAmount = 0;
-		}
-		PhoneBook(PhoneBook&){
-		}
-		PhoneBook &operator=(const PhoneBook&){
-			return *this;
-		}
-		~PhoneBook(){
-		}
+		PhoneBook();
+		PhoneBook(const PhoneBook &other);
+		PhoneBook &operator=(const PhoneBook &other);
+		~PhoneBook();
 		void	addContact();
 		void	searchContact();
 		void	printPhoneBook();
