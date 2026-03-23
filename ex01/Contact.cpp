@@ -88,13 +88,13 @@ void Contact::setLastName(std::string ln){
 }
 
 void Contact::setNickname(std::string nn){
-	nickname.assign(nn, 0, 10);
+	nickname = nn;
 }
 
 void Contact::setPhoneNumber(std::string pn){
-	phoneNumber.assign(pn, 0, 10);
+	phoneNumber = pn;
 }
 
 void Contact::setDarkestSecret(std::string ds){
-	darkestSecret.assign(ds, 0, 10);
+	darkestSecret = ds;
 }
